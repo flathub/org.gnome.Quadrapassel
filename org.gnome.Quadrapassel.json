@@ -1,7 +1,7 @@
 {
   "app-id": "org.gnome.Quadrapassel",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "41",
+  "runtime-version": "43",
   "sdk": "org.gnome.Sdk",
   "command": "quadrapassel",
   "finish-args": [
@@ -55,6 +55,7 @@
         }
       ]
     },
+    "shared-modules/clutter/clutter.json",
     {
       "name": "quadrapassel",
       "buildsystem": "meson",
