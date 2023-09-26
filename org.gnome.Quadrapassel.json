@@ -1,7 +1,7 @@
 {
   "app-id": "org.gnome.Quadrapassel",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "43",
+  "runtime-version": "45",
   "sdk": "org.gnome.Sdk",
   "command": "quadrapassel",
   "finish-args": [
@@ -38,8 +38,8 @@
         {
           "type": "git",
           "url": "https://gitlab.freedesktop.org/libevdev/libevdev.git",
-          "tag": "libevdev-1.10.1",
-          "commit": "7eae5e322c942d5b6b59ea6de35025dd28877aa8"
+          "tag": "libevdev-1.13.1",
+          "commit": "4582559b668f45fcd1486ce5f21f20df49db6d02"
         }
       ]
     },
@@ -62,7 +62,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download-fallback.gnome.org/sources/quadrapassel/40/quadrapassel-40.2.tar.xz",
+          "url": "https://download.gnome.org/sources/quadrapassel/40/quadrapassel-40.2.tar.xz",
           "sha256": "0bd822414207c73123ed6a49f723da5ac8dd4df5d35edc099ffea2e1399cc00a"
         }
       ]
