@@ -5,17 +5,26 @@
   "sdk": "org.gnome.Sdk",
   "command": "quadrapassel",
   "finish-args": [
-    "--share=ipc", "--socket=fallback-x11",
+    "--share=ipc",
+    "--socket=fallback-x11",
     "--socket=wayland",
-    "--device=dri", "--socket=pulseaudio"
+    "--device=dri",
+    "--socket=pulseaudio"
   ],
   "cleanup": [
-    "/include", "/lib/pkgconfig",
-    "/share/pkgconfig", "/share/aclocal",
-    "/man", "/share/man", "/share/gtk-doc",
-    "*.la", "*.a",
+    "/include",
+    "/lib/pkgconfig",
+    "/share/pkgconfig",
+    "/share/aclocal",
+    "/man",
+    "/share/man",
+    "/share/gtk-doc",
+    "*.la",
+    "*.a",
     "/lib/girepository-1.0",
-    "/share/dbus-1", "/share/doc", "/share/gir-1.0"
+    "/share/dbus-1",
+    "/share/doc",
+    "/share/gir-1.0"
   ],
   "modules": [
     {
