@@ -73,6 +73,10 @@
           "type": "archive",
           "url": "https://download.gnome.org/sources/quadrapassel/40/quadrapassel-40.2.tar.xz",
           "sha256": "0bd822414207c73123ed6a49f723da5ac8dd4df5d35edc099ffea2e1399cc00a"
+        },
+        {
+          "type": "patch",
+          "path": "fix-appdata.patch"
         }
       ]
     }
