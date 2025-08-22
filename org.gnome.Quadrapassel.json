@@ -1,84 +1,100 @@
 {
-  "app-id": "org.gnome.Quadrapassel",
-  "runtime": "org.gnome.Platform",
-  "runtime-version": "46",
-  "sdk": "org.gnome.Sdk",
-  "command": "quadrapassel",
-  "finish-args": [
-    "--share=ipc",
-    "--socket=fallback-x11",
-    "--socket=wayland",
-    "--device=dri",
-    "--socket=pulseaudio"
-  ],
-  "cleanup": [
-    "/include",
-    "/lib/pkgconfig",
-    "/share/pkgconfig",
-    "/share/aclocal",
-    "/man",
-    "/share/man",
-    "/share/gtk-doc",
-    "*.la",
-    "*.a",
-    "/lib/girepository-1.0",
-    "/share/dbus-1",
-    "/share/doc",
-    "/share/gir-1.0"
-  ],
-  "modules": [
-    {
-      "name" : "gsound",
-      "buildsystem": "meson",
-      "sources" : [
+    "app-id": "org.gnome.Quadrapassel",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "48",
+    "sdk": "org.gnome.Sdk",
+    "command": "quadrapassel",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--device=dri",
+        "--socket=pulseaudio"
+    ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/share/pkgconfig",
+        "/share/aclocal",
+        "/man",
+        "/share/man",
+        "/share/gtk-doc",
+        "*.la",
+        "*.a",
+        "/lib/girepository-1.0",
+        "/share/dbus-1",
+        "/share/doc",
+        "/share/gir-1.0"
+    ],
+    "modules": [
         {
-          "type" : "archive",
-          "url" : "https://download.gnome.org/sources/gsound/1.0/gsound-1.0.3.tar.xz",
-          "sha256": "ca2d039e1ebd148647017a7f548862350bc9af01986d39f10cfdc8e95f07881a"
-        }
-      ],
-      "modules" : [
-        "shared-modules/libcanberra/libcanberra.json"
-      ]
-    },
-    {
-      "name": "libevdev",
-      "sources": [
-        {
-          "type": "git",
-          "url": "https://gitlab.freedesktop.org/libevdev/libevdev.git",
-          "tag": "libevdev-1.13.1",
-          "commit": "4582559b668f45fcd1486ce5f21f20df49db6d02"
-        }
-      ]
-    },
-    {
-      "name": "libmanette",
-      "buildsystem": "meson",
-      "sources": [
-        {
-          "type": "git",
-          "url": "https://gitlab.gnome.org/GNOME/libmanette.git",
-          "tag": "0.2.6",
-          "commit": "f3fc99a3582845725dc3f56fe7ffdc1ae3019d0f"
-        }
-      ]
-    },
-    "shared-modules/clutter/clutter.json",
-    {
-      "name": "quadrapassel",
-      "buildsystem": "meson",
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://download.gnome.org/sources/quadrapassel/40/quadrapassel-40.2.tar.xz",
-          "sha256": "0bd822414207c73123ed6a49f723da5ac8dd4df5d35edc099ffea2e1399cc00a"
+            "name": "gsound",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gsound/1.0/gsound-1.0.3.tar.xz",
+                    "sha256": "ca2d039e1ebd148647017a7f548862350bc9af01986d39f10cfdc8e95f07881a",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "gsound"
+                    }
+                }
+            ],
+            "modules": [
+                "shared-modules/libcanberra/libcanberra.json"
+            ]
         },
         {
-          "type": "patch",
-          "path": "fix-appdata.patch"
+            "name": "libevdev",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.freedesktop.org/libevdev/libevdev.git",
+                    "tag": "libevdev-1.13.4",
+                    "commit": "ac0056961c3332a260db063ab4fccc7747638a1d",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^libevdev-([\\d.]+)$"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "libmanette",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/libmanette.git",
+                    "tag": "0.2.12",
+                    "commit": "4269d756333897828e82a3b4d593af2c24d83da0",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^([\\d.]+)$"
+                    }
+                }
+            ]
+        },
+        "shared-modules/clutter/clutter.json",
+        {
+            "name": "quadrapassel",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/quadrapassel/40/quadrapassel-40.2.tar.xz",
+                    "sha256": "0bd822414207c73123ed6a49f723da5ac8dd4df5d35edc099ffea2e1399cc00a",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "quadrapassel"
+                    }
+                },
+                {
+                    "type": "patch",
+                    "path": "fix-appdata.patch"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
