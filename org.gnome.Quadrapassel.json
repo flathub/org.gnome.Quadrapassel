@@ -1,7 +1,7 @@
 {
   "app-id": "org.gnome.Quadrapassel",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "46",
+  "runtime-version": "49beta",
   "sdk": "org.gnome.Sdk",
   "command": "quadrapassel",
   "finish-args": [
@@ -22,7 +22,6 @@
     "*.la",
     "*.a",
     "/lib/girepository-1.0",
-    "/share/dbus-1",
     "/share/doc",
     "/share/gir-1.0"
   ],
@@ -37,8 +36,22 @@
           "sha256": "ca2d039e1ebd148647017a7f548862350bc9af01986d39f10cfdc8e95f07881a"
         }
       ],
-      "modules" : [
-        "shared-modules/libcanberra/libcanberra.json"
+      "modules": [
+        {
+          "name": "libcanberra",
+          "config-opts": [
+            "--disable-alsa",
+            "--disable-null",
+            "--disable-oss"
+          ],
+          "sources": [
+            {
+              "type": "archive",
+              "url": "http://0pointer.de/lennart/projects/libcanberra/libcanberra-0.30.tar.xz",
+              "sha256": "c2b671e67e0c288a69fc33dc1b6f1b534d07882c2aceed37004bf48c601afa72"
+            }
+          ]
+        }
       ]
     },
     {
@@ -64,19 +77,14 @@
         }
       ]
     },
-    "shared-modules/clutter/clutter.json",
     {
       "name": "quadrapassel",
       "buildsystem": "meson",
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/quadrapassel/40/quadrapassel-40.2.tar.xz",
-          "sha256": "0bd822414207c73123ed6a49f723da5ac8dd4df5d35edc099ffea2e1399cc00a"
-        },
-        {
-          "type": "patch",
-          "path": "fix-appdata.patch"
+          "url": "http://download.gnome.org/sources/quadrapassel/49/quadrapassel-49.rc.4.tar.xz",
+          "sha256": "84e626bfc19c66f6becd8435adcb5db944dc98cd758c69f602623fa71608d7fa"
         }
       ]
     }
