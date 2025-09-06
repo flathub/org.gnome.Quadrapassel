@@ -1,7 +1,7 @@
 {
   "app-id": "org.gnome.Quadrapassel",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "48",
+  "runtime-version": "49",
   "sdk": "org.gnome.Sdk",
   "command": "quadrapassel",
   "finish-args": [
@@ -9,6 +9,7 @@
     "--socket=fallback-x11",
     "--socket=wayland",
     "--device=dri",
+    "--device=all",
     "--socket=pulseaudio"
   ],
   "cleanup": [
@@ -36,30 +37,21 @@
           "sha256": "ca2d039e1ebd148647017a7f548862350bc9af01986d39f10cfdc8e95f07881a"
         }
       ],
-      "modules" : [
-        "shared-modules/libcanberra/libcanberra.json"
-      ]
-    },
-    {
-      "name": "blueprint-compiler",
-      "buildsystem": "meson",
-      "cleanup": ["*"],
-      "sources": [
+      "modules": [
         {
-          "type": "git",
-          "url": "https://gitlab.gnome.org/GNOME/blueprint-compiler",
-          "commit": "07c9c9df9cd1b6b4454ecba21ee58211e9144a4b"
-        }
-      ]
-    },
-    {
-      "name": "libevdev",
-      "sources": [
-        {
-          "type": "git",
-          "url": "https://gitlab.freedesktop.org/libevdev/libevdev.git",
-          "tag": "libevdev-1.13.4",
-          "commit": "ac0056961c3332a260db063ab4fccc7747638a1d"
+          "name": "libcanberra",
+          "config-opts": [
+            "--disable-alsa",
+            "--disable-null",
+            "--disable-oss"
+          ],
+          "sources": [
+            {
+              "type": "archive",
+              "url": "http://0pointer.de/lennart/projects/libcanberra/libcanberra-0.30.tar.xz",
+              "sha256": "c2b671e67e0c288a69fc33dc1b6f1b534d07882c2aceed37004bf48c601afa72"
+            }
+          ]
         }
       ]
     },
@@ -70,24 +62,32 @@
         {
           "type": "git",
           "url": "https://gitlab.gnome.org/GNOME/libmanette.git",
-          "tag": "0.2.12",
-          "commit": "4269d756333897828e82a3b4d593af2c24d83da0",
-          "x-checker-data": {
+          "tag": "0.2.9",
+          "commit": "508df238f9c25a20c0d06da8c9bf83138759d40f"
+        }
+      ],
+      "modules": [
+      	{
+          "name": "libevdev",
+          "sources": [
+            {
               "type": "git",
-              "tag-pattern": "^([\\d.]+)$"
-          }
+              "url": "https://gitlab.freedesktop.org/libevdev/libevdev.git",
+              "tag": "libevdev-1.13.3",
+              "commit": "2342d8c9eea862111991a609df961adae89f8eee"
+            }
+          ]
         }
       ]
     },
-    "shared-modules/clutter/clutter.json",
     {
       "name": "quadrapassel",
       "buildsystem": "meson",
       "sources": [
         {
           "type": "archive",
-          "url": "https://gitlab.gnome.org/GNOME/quadrapassel/-/archive/49.0/quadrapassel-49.0.tar.gz",
-          "sha256": "2cbbd4905491f97074feab9562f74eef1df4739e014362416b5590280e4b8816"
+          "url": "https://download.gnome.org/sources/quadrapassel/49/quadrapassel-49.0.tar.xz",
+          "sha256": "54531edf0f9aa66936aa34079afcc2a5c00025f40168cafb7ebb1db8f242eee1"
         }
       ]
     }
