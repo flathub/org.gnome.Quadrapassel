@@ -9,6 +9,7 @@
     "--socket=fallback-x11",
     "--socket=wayland",
     "--device=dri",
+    "--device=all",
     "--socket=pulseaudio"
   ],
   "cleanup": [
@@ -83,8 +84,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://download.gnome.org/sources/quadrapassel/49/quadrapassel-49.rc.4.tar.xz",
-          "sha256": "84e626bfc19c66f6becd8435adcb5db944dc98cd758c69f602623fa71608d7fa"
+          "url": "https://download.gnome.org/sources/quadrapassel/49/quadrapassel-49.0.tar.xz",
+          "sha256": "54531edf0f9aa66936aa34079afcc2a5c00025f40168cafb7ebb1db8f242eee1"
         }
       ]
     }
