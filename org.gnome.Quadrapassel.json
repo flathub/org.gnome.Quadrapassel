@@ -1,7 +1,7 @@
 {
   "app-id": "org.gnome.Quadrapassel",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "46",
+  "runtime-version": "48",
   "sdk": "org.gnome.Sdk",
   "command": "quadrapassel",
   "finish-args": [
@@ -42,13 +42,24 @@
       ]
     },
     {
+      "name": "blueprint-compiler",
+      "buildsystem": "meson",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://gitlab.gnome.org/GNOME/blueprint-compiler",
+          "commit": "07c9c9df9cd1b6b4454ecba21ee58211e9144a4b"
+        }
+      ]
+    },
+    {
       "name": "libevdev",
       "sources": [
         {
           "type": "git",
           "url": "https://gitlab.freedesktop.org/libevdev/libevdev.git",
-          "tag": "libevdev-1.13.1",
-          "commit": "4582559b668f45fcd1486ce5f21f20df49db6d02"
+          "tag": "libevdev-1.13.4",
+          "commit": "ac0056961c3332a260db063ab4fccc7747638a1d"
         }
       ]
     },
@@ -59,8 +70,12 @@
         {
           "type": "git",
           "url": "https://gitlab.gnome.org/GNOME/libmanette.git",
-          "tag": "0.2.6",
-          "commit": "f3fc99a3582845725dc3f56fe7ffdc1ae3019d0f"
+          "tag": "0.2.12",
+          "commit": "4269d756333897828e82a3b4d593af2c24d83da0",
+          "x-checker-data": {
+              "type": "git",
+              "tag-pattern": "^([\\d.]+)$"
+          }
         }
       ]
     },
@@ -71,12 +86,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/quadrapassel/40/quadrapassel-40.2.tar.xz",
-          "sha256": "0bd822414207c73123ed6a49f723da5ac8dd4df5d35edc099ffea2e1399cc00a"
-        },
-        {
-          "type": "patch",
-          "path": "fix-appdata.patch"
+          "url": "https://gitlab.gnome.org/GNOME/quadrapassel/-/archive/49.0/quadrapassel-49.0.tar.gz",
+          "sha256": "2cbbd4905491f97074feab9562f74eef1df4739e014362416b5590280e4b8816"
         }
       ]
     }
