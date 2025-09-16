@@ -1,0 +1,27 @@
+From 1749a6be85be705898eabe4fa638a4428aa24fdf Mon Sep 17 00:00:00 2001
+From: Will Warner <willwwarner@proton.me>
+Date: Tue, 16 Sep 2025 15:12:02 -0400
+Subject: [PATCH] metainfo: use better brand colors
+
+---
+ data/org.gnome.Quadrapassel.metainfo.xml.in.in | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/data/org.gnome.Quadrapassel.metainfo.xml.in.in b/data/org.gnome.Quadrapassel.metainfo.xml.in.in
+index b68bb34..dbf68e5 100644
+--- a/data/org.gnome.Quadrapassel.metainfo.xml.in.in
++++ b/data/org.gnome.Quadrapassel.metainfo.xml.in.in
+@@ -50,8 +50,8 @@
+   <url type="translate">https://l10n.gnome.org/module/quadrapassel/</url>
+   <launchable type="desktop-id">@app-id@.desktop</launchable>
+   <branding>
+-    <color type="primary" scheme_preference="light">#B73737</color>
+-    <color type="primary" scheme_preference="dark">#764B7C</color>
++    <color type="primary" scheme_preference="light">#f1c8f7</color>
++    <color type="primary" scheme_preference="dark">#672e6f</color>
+   </branding>
+   <releases>
+     <release date="2025-09-13" version="49.0">
+-- 
+GitLab
+

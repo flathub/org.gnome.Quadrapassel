@@ -88,6 +88,10 @@
           "type": "archive",
           "url": "https://download.gnome.org/sources/quadrapassel/49/quadrapassel-49.0.tar.xz",
           "sha256": "54531edf0f9aa66936aa34079afcc2a5c00025f40168cafb7ebb1db8f242eee1"
+        },
+        {
+          "type": "patch",
+          "path": "fix-metainfo.patch"
         }
       ]
     }
