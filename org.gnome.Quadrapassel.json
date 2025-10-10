@@ -60,10 +60,9 @@
       "buildsystem": "meson",
       "sources": [
         {
-          "type": "git",
-          "url": "https://gitlab.gnome.org/GNOME/libmanette.git",
-          "tag": "0.2.9",
-          "commit": "508df238f9c25a20c0d06da8c9bf83138759d40f"
+          "type": "archive",
+          "url": "https://download.gnome.org/sources/libmanette/0.2/libmanette-0.2.13.tar.xz",
+          "sha256": "287cc2fde0de092919366af757d85e7b3a0248eb1b395344726e97955a77d8ae"
         }
       ],
       "modules": [
@@ -73,8 +72,8 @@
             {
               "type": "git",
               "url": "https://gitlab.freedesktop.org/libevdev/libevdev.git",
-              "tag": "libevdev-1.13.3",
-              "commit": "2342d8c9eea862111991a609df961adae89f8eee"
+              "tag": "libevdev-1.13.4",
+              "commit": "ac0056961c3332a260db063ab4fccc7747638a1d"
             }
           ]
         }
@@ -86,12 +85,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/quadrapassel/49/quadrapassel-49.0.tar.xz",
-          "sha256": "54531edf0f9aa66936aa34079afcc2a5c00025f40168cafb7ebb1db8f242eee1"
-        },
-        {
-          "type": "patch",
-          "path": "fix-metainfo.patch"
+          "url": "https://download.gnome.org/sources/quadrapassel/49/quadrapassel-49.1.tar.xz",
+          "sha256": "b6d7a3b6775a6dc4f1980bd937832466617a897ecaa1098f3a2c59be17616509"
         }
       ]
     }
