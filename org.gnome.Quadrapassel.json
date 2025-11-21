@@ -85,8 +85,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/quadrapassel/49/quadrapassel-49.1.tar.xz",
-          "sha256": "b6d7a3b6775a6dc4f1980bd937832466617a897ecaa1098f3a2c59be17616509"
+          "url": "https://download.gnome.org/sources/quadrapassel/49/quadrapassel-49.2.1.tar.xz",
+          "sha256": "a5320a6f8ee08562a436caba4e34f7ae040fedc8d72fbea227f7025d93c4c6b9"
         }
       ]
     }
