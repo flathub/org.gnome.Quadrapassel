@@ -56,30 +56,6 @@
       ]
     },
     {
-      "name": "libmanette",
-      "buildsystem": "meson",
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://download.gnome.org/sources/libmanette/0.2/libmanette-0.2.13.tar.xz",
-          "sha256": "287cc2fde0de092919366af757d85e7b3a0248eb1b395344726e97955a77d8ae"
-        }
-      ],
-      "modules": [
-      	{
-          "name": "libevdev",
-          "sources": [
-            {
-              "type": "git",
-              "url": "https://gitlab.freedesktop.org/libevdev/libevdev.git",
-              "tag": "libevdev-1.13.4",
-              "commit": "ac0056961c3332a260db063ab4fccc7747638a1d"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "quadrapassel",
       "buildsystem": "meson",
       "sources": [
