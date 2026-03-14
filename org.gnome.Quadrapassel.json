@@ -1,7 +1,7 @@
 {
   "app-id": "org.gnome.Quadrapassel",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "49",
+  "runtime-version": "50",
   "sdk": "org.gnome.Sdk",
   "command": "quadrapassel",
   "finish-args": [
@@ -61,8 +61,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/quadrapassel/49/quadrapassel-49.3.tar.xz",
-          "sha256": "4e272d40c6019f185eaee66012f7f2d3fecf6b77fcd9c1c94e3046972210c97b"
+          "url": "https://download.gnome.org/sources/quadrapassel/50/quadrapassel-50.0.tar.xz",
+          "sha256": "9a69056608653b95916f02e7f6065f9d7d5ec142098b6e8105ad7e380d03b3bf"
         }
       ]
     }
