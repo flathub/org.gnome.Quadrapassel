@@ -22,8 +22,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/quadrapassel/50/quadrapassel-50.1.tar.xz",
-          "sha256": "51e43d059f06b89c105d53d71def0bd97ce944470ee139fc7e743fce4a6c3994"
+          "url": "https://download.gnome.org/sources/quadrapassel/50/quadrapassel-50.2.tar.xz",
+          "sha256": "cf9981fd66cecbd8ec5b3e62f525d14f2fce5e477bc5d913a8acbeee3ffa147d"
         }
       ]
     }
