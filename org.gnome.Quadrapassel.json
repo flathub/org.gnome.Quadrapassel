@@ -1,7 +1,7 @@
 {
   "app-id": "org.gnome.Quadrapassel",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "50",
+  "runtime-version": "51",
   "sdk": "org.gnome.Sdk",
   "command": "quadrapassel",
   "finish-args": [
@@ -10,10 +10,8 @@
     "--socket=wayland",
     "--device=dri",
     "--device=all",
+    "--filesystem=xdg-run/pipewire-0",
     "--socket=pulseaudio"
-  ],
-  "cleanup": [
-    "/share/man"
   ],
   "modules": [
     {
@@ -22,8 +20,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/quadrapassel/50/quadrapassel-50.2.tar.xz",
-          "sha256": "cf9981fd66cecbd8ec5b3e62f525d14f2fce5e477bc5d913a8acbeee3ffa147d"
+          "url": "https://download.gnome.org/sources/quadrapassel/51/quadrapassel-51.0.tar.xz",
+          "sha256": "dbfcc3ce8f2e52710a44438d690d6fc4f180b0ec0896066c639c2acd9c155340"
         }
       ]
     }
